@@ -1,0 +1,51 @@
+﻿<Page
+    x:Class="video_player.video_player"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:video_player"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="DarkCyan">
+    <ScrollViewer  HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+        <Grid>
+        <Rectangle HorizontalAlignment="Center" Height="627" Margin="0,11,0,0" Stroke="Black" VerticalAlignment="Top" Width="1086" Fill="Black"/>
+        <MediaElement x:Name="media_player" HorizontalAlignment="Left" Height="522" VerticalAlignment="Top" Width="950" Source="Assets/show_must_go_on.mp4" AutoPlay="True" AreTransportControlsEnabled="True" Margin="97,11,0,0"/>
+        <Image x:Name="Innuendo" HorizontalAlignment="Left" Height="92" Margin="1075,22,0,0" VerticalAlignment="Top" Width="84" Source="/Assets/innuendo.png" Tapped="Innuendo_Tapped"/>
+        <Image x:Name="freedom_90" HorizontalAlignment="Left" Height="92" Margin="1075,126,0,0" VerticalAlignment="Top" Width="84" Source="/Assets/freedom_90.jpg" Tapped="freedom_90_Tapped"/>
+        <Image x:Name="rhythm_nation" HorizontalAlignment="Left" Height="92" Margin="1075,230,0,0" VerticalAlignment="Top" Width="84" Source="/Assets/rhythm_nation.png" Tapped="rhythm_nation_Tapped"/>
+        <Image x:Name="dangerous" HorizontalAlignment="Left" Height="92" Margin="1075,334,0,0" VerticalAlignment="Top" Width="84" Source="/Assets/dangerous.jpg" Tapped="dangerous_Tapped"/>
+        <Image x:Name="vogue" HorizontalAlignment="Left" Height="92" Margin="1075,436,0,0" VerticalAlignment="Top" Width="84" Source="/Assets/vogue.jpg" Tapped="vogue_Tapped"/>
+        <Image x:Name="gonna_make_you_sweat" HorizontalAlignment="Left" Height="92" Margin="1075,540,0,0" VerticalAlignment="Top" Width="84" Source="/Assets/gonna_make_you_sweat.jpg" Tapped="gonna_make_you_sweat_Tapped"/>
+        <Rectangle x:Name="indicator" HorizontalAlignment="Left" Height="4" Margin="1075,112,0,0" Fill="DarkGray" VerticalAlignment="Top" Width="84"/>
+        <Rectangle x:Name="indicator_Copy" HorizontalAlignment="Left" Height="106" Margin="97,532,0,0" Fill="White" VerticalAlignment="Top" Width="950"/>
+        <TextBlock HorizontalAlignment="Left" Margin="214,545,0,0" Text="Now Playing" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" Width="181" Foreground="Black" FontSize="28" FontWeight="Bold"/>
+        <TextBlock x:Name="player_indicator" HorizontalAlignment="Left" Margin="214,582,0,0" Text="Null" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" Width="752" Foreground="Black" FontSize="28" FontWeight="Normal" FontStyle="Italic"/>
+        <Image HorizontalAlignment="Left" Height="86" Margin="107,542,0,0" VerticalAlignment="Top" Width="106" Source="/Assets/now_playing.png"/>
+        <Ellipse x:Name="music_videos" HorizontalAlignment="Left" Height="26" Margin="1195,304,0,0" Fill="White" VerticalAlignment="Top" Width="26" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <Ellipse.RenderTransform>
+                <CompositeTransform Rotation="89.876" TranslateX="23.948" TranslateY="-24"/>
+            </Ellipse.RenderTransform>
+        </Ellipse>
+        <Ellipse x:Name="about_artists" HorizontalAlignment="Left" Height="21" Margin="1226,307,0,0" Fill="White" VerticalAlignment="Top" Width="21" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Tapped="about_artists_Tapped">
+            <Ellipse.RenderTransform>
+                <CompositeTransform Rotation="89.876" TranslateX="-4.99" TranslateY="4.001"/>
+            </Ellipse.RenderTransform>
+        </Ellipse>
+        <Ellipse x:Name="about_us" HorizontalAlignment="Left" Height="17" Margin="1252,309,0,0" Fill="White" VerticalAlignment="Top" Width="17" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Tapped="about_us_Tapped">
+            <Ellipse.RenderTransform>
+                <CompositeTransform Rotation="89.876" TranslateX="-28.938" TranslateY="28.001"/>
+            </Ellipse.RenderTransform>
+        </Ellipse>
+        <Rectangle x:Name="indicator_Copy1" HorizontalAlignment="Left" Height="76" Margin="8,284,0,0" Fill="White" VerticalAlignment="Top" Width="82"/>
+        <Image HorizontalAlignment="Left" Height="65" Margin="23,290,0,0" VerticalAlignment="Top" Width="55" Source="/Assets/music_videos_icon.png"/>
+    </Grid>
+    </ScrollViewer>
+    <Page.Transitions>
+        <TransitionCollection>
+            <EdgeUIThemeTransition Edge="Bottom">
+            </EdgeUIThemeTransition>
+        </TransitionCollection>
+    </Page.Transitions>
+        
+</Page>
